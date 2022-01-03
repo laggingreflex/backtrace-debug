@@ -4,7 +4,7 @@ import assign from 'proxy-assign';
 
 const importMetaUrl = new URL(import.meta.url);
 const capacity = Number(importMetaUrl.searchParams?.get?.('capacity')) ?? 10;
-const bl = new BacktraceLogging({ capacity });
+export const bl = new BacktraceLogging({ capacity });
 export const { flush } = bl;
 
 export default function create(namespace) {
